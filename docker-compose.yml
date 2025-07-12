@@ -1,0 +1,55 @@
+version: '3.8'
+#this is the docker compose file used if you are running on docker desktop, easier option to use than manually starting the services
+services:
+  # frontend - Next.js
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - interview-ai-network
+
+  # backend - FastAPI
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./interview_ai.db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+    networks:
+      - interview-ai-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - interview-ai-network
+
+
+volumes:
+  redis_data:
+
+networks:
+  interview-ai-network:
+    driver: bridge 

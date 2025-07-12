@@ -1,0 +1,63 @@
+{
+  "startup_time": "2025-07-11T19:58:50.619346",
+  "total_interviews": 0,
+  "successful_analyses": 6,
+  "failed_analyses": 0,
+  "average_processing_time": 9.128787239392599,
+  "total_processing_time": 54.77272343635559,
+  "daily_stats": {
+    "2025-07-11": {
+      "interviews_created": 0,
+      "analyses_completed": 5,
+      "analyses_failed": 0,
+      "total_processing_time": 46.37220907211304,
+      "api_requests": 0,
+      "successful_requests": 0,
+      "failed_requests": 0
+    },
+    "2025-07-12": {
+      "interviews_created": 0,
+      "analyses_completed": 1,
+      "analyses_failed": 0,
+      "total_processing_time": 8.400514364242554,
+      "api_requests": 0,
+      "successful_requests": 0,
+      "failed_requests": 0
+    }
+  },
+  "error_counts": {},
+  "performance_metrics": {
+    "eye_contact_scores": [
+      0.0,
+      95.41284403669725,
+      95.41284403669725,
+      15.32258064516129,
+      90.04329004329004,
+      0.0
+    ],
+    "sentiment_scores": [
+      0.0,
+      0.0,
+      0.0,
+      0.45499999999999996,
+      0.21666666666666667,
+      0.3444444444444444
+    ],
+    "speech_rates": [
+      140.0,
+      163.04347826086956,
+      163.04347826086956,
+      124.99999999999999,
+      164.9484536082474,
+      170.73170731707316
+    ],
+    "overall_scores": [
+      52.1,
+      74.2,
+      74.2,
+      66.4,
+      73.3,
+      48.5
+    ]
+  }
+}
