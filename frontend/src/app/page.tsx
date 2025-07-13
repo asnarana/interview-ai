@@ -108,7 +108,7 @@ export default function Home() {
                 <span className="text-blue-600 font-bold">2</span>
               </div>
               <h4 className="font-semibold mb-2">AI Analysis</h4>
-              <p className="text-gray-600">Our AI analyzes your performance</p>
+              <p className="text-gray-600">The AI analyzes your performance</p>
             </div>
             
             <div className="text-center">
