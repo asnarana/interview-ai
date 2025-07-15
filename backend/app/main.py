@@ -79,6 +79,7 @@ app = FastAPI(
 )
 
 # cors middleware configuration for frontend communication
+#necessary so that my frontend on 3000 can make requests to fast api backend on 8000
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"], 
@@ -113,7 +114,7 @@ async def http_exception_handler(request, exc):
         status_code=exc.status_code,
         content={"detail": exc.detail}
     )
-
+#main entry point to run the application
 if __name__ == "__main__":
     uvicorn.run(
         "app.main:app",
